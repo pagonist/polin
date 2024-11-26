@@ -1,0 +1,59 @@
+.email-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 70px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 30px;
+    z-index: 1;
+}
+
+.email-signup-container {
+    max-width: 600px;
+    width: 100%;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.email-signup p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.email-signup form {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+}
+
+.email-signup input[type="email"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 70%;
+    color: #333;
+}
+
+.email-signup button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background: linear-gradient(135deg, #15fd00, #245c5d);
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email-signup button:hover {
+    opacity: 0.85;
+}

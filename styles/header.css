@@ -1,0 +1,11 @@
+header {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+
+}

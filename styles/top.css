@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #0A3A59, #121927, #1C2F46, #22A017);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 25%; }
+    50% { background-position: 25% 25%; }
+    100% { background-position: 0% 25%; }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 0px;
+}
+
+.logo1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+    margin-right: 20px;
+    margin-left: auto;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+    line-height: 1.5;
+    padding: 12px 16px;
+}
+
+nav a:hover {
+    color: #25ddc4;
+}
+
+.auth-buttons .sign-up {
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, #2cb81f, #179b9d);
+    color: #ffffff;
+    border: none;
+    padding: 12px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s ease;
+    box-shadow: #161f2e;
+}
+
+.auth-buttons .sign-up:hover {
+    opacity: 75%;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-top: 100px;
+    padding-left: 150px;
+    width: 100%;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 0.1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+.sign-up-free {
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, #2cb81f, #179b9d);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    position: relative;
+    transition: background-color 0.3s, transform 0.2s ease;
+    text-decoration: underline;
+    max-width: 200px;
+}
+
+.sign-up-free::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sign-up-free:hover {
+    background-color: #179b9d;
+}
+
+.sign-up-free:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.circle {
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -5;
+}
+
+.right-image {
+    position: absolute;
+    margin-top: 450px;
+    right: -15%;
+    transform: translateY(-50%);
+    width: 1000px;
+    height: auto;
+    z-index: -4;
+}
+
+#lava {
+    color: #15fd00;
+}
+
+.hs {
+    text-align: center;
+    margin-top: 10px;
+    z-index: 1;
+    padding-top: 10px;
+}
+
+.hs__stats {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 200px;
+    justify-content: center;
+}
+
+.hs__stat {
+    background: linear-gradient(-80deg, #85ff3f, #299c10);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 1000px;
+    margin: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0px;
+    transform: translateY(50px);
+}
+
+#unique-email {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 16px;
+    margin-top: 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 100px;
+}
+
+#unique-email::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+#unique-email:focus {
+    border-color: #60f80c;
+    box-shadow: 0 4px 12px rgba(96, 248, 12, 0.3);
+}
+
+.Connect {
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, #15fd00, #245c5d);
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s ease;
+    box-shadow: #161f2e;
+    line-height: 1.5;
+}
+
+.Connect:hover {
+    opacity: 75%;
+}
