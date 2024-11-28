@@ -112,3 +112,63 @@ document.addEventListener("DOMContentLoaded", function() {
 document.getElementById('connectButton').addEventListener('click', function() {
   window.location.href = 'https://app.tradingfury.fr/';
 });
+
+
+document.getElementById('emailForm').addEventListener('submit', async function(event) {
+  event.preventDefault();
+
+  const email = document.getElementById('unique-email').value;
+
+  try {
+    const response = await fetch('https://api.tradingfury.fr/v1/emails', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: email,
+        type: 'sign_up'
+      })
+    });
+
+    if (response.ok) {
+      console.log('Email submitted successfully');
+    } else {
+      console.error('Failed to submit email:', response.statusText);
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  } finally {
+    window.location.href = 'https://app.tradingfury.fr/';
+  }
+});
+
+
+document.getElementById('newsletterEmail').addEventListener('submit', async function(event) {
+  event.preventDefault();
+
+  const email = document.querySelector('input[name="email"]').value;
+
+  try {
+    const response = await fetch('https://api.tradingfury.fr/v1/emails', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: email,
+        type: 'newsletter'
+      })
+    });
+
+    if (response.ok) {
+      console.log('Email submitted successfully');
+    } else {
+      console.error('Failed to submit email:', response.statusText);
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+});
+
+

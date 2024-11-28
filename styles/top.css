@@ -97,6 +97,7 @@ nav a:hover {
 }
 
 .sign-up-free {
+    width: 100%;
     font-size: 1.1rem;
     background: linear-gradient(135deg, #2cb81f, #179b9d);
     color: white;
@@ -175,7 +176,7 @@ nav a:hover {
 }
 
 .hs__stat {
-    background: linear-gradient(-80deg, #85ff3f, #299c10);
+    background: linear-gradient(-80deg, #46be01, #299c10);
     color: white;
     padding: 30px;
     border-radius: 10px;
@@ -198,7 +199,14 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     margin-right: 100px;
+    
 }
+
+#emailForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 
 #unique-email::placeholder {
     color: #888;
@@ -225,4 +233,36 @@ nav a:hover {
 
 .Connect:hover {
     opacity: 75%;
+}
+
+
+
+/* Popup Modal Styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
 }

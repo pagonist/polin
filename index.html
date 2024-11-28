@@ -33,11 +33,14 @@
 
 
     <section class="hero">
-        <h1 id="cold">Track Your Trades.</h1>
-        <h1 id="lava">For Better Results.</h1>
+        <h1 id="cold">Track Your Trades</h1>
+        <h1 id="lava">For Better Results</h1>
         <p>Powerful trading tools to optimize your investments</p>
-        <input type="email" id="unique-email" name="email" placeholder="Enter your email address" required>
-        <button class="sign-up-free">Sign up (it's free)</button>
+        <form id="emailForm">
+            <input type="email" id="unique-email" name="email" placeholder="Enter your email address" required>
+            <button type="submit" class="sign-up-free">Sign up (it's free)</button>
+          </form>
+          
     </section>
 
     <img src="/images/RIGHTIMAGE.webp" alt="Landing Image" class="right-image">
@@ -50,6 +53,13 @@
                 <h2>Track Your Trades, Boost Your Efficiency</h2>
                 <p>Gain control over your trades with TradingFury. Analyze strategies and make data-driven decisions to improve your trading performance.</p>
             </div>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close-btn">&times;</span>
+            <h2>Thanks for subscribing to our newsletter!</h2>
         </div>
     </div>
 
@@ -96,7 +106,7 @@
                 <div class="features__section reverse">
                     <div class="features__section-card__container" data-aos="fade-right" data-aos-delay="400">
                         <div class="features__section-card">
-                            <img class="image-bottom-right" src="/images/graph.webp" alt="Clendar Preview"/>
+                            <img class="image-bottom-right" src="/images/graphs.webp" alt="Clendar Preview"/>
                         </div>
                     </div>
                     <div class="features__section-text" data-aos="fade-up" data-aos-delay="200">
@@ -120,7 +130,7 @@
     <section class="email-signup">
         <div class="email-signup-container">
             <p>Stay updated with the latest trading insights</p>
-            <form action="#" method="post">
+            <form  id="newsletterEmail">
                 <input type="email" name="email" placeholder="Enter your email address" required>
                 <button type="submit">Subscribe</button>
             </form>
