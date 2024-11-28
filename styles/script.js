@@ -147,7 +147,7 @@ document.getElementById('emailForm').addEventListener('submit', async function(e
 document.getElementById('newsletterEmail').addEventListener('submit', async function(event) {
   event.preventDefault();
 
-  const email = document.querySelector('input[name="email"]').value;
+  const email = document.getElementById('news-email').value;
 
   try {
     const response = await fetch('https://api.tradingfury.fr/v1/emails', {
