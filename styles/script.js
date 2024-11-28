@@ -170,5 +170,3 @@ document.getElementById('newsletterEmail').addEventListener('submit', async func
     console.error('Error:', error);
   }
 });
-
-
