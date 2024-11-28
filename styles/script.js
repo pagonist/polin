@@ -131,9 +131,7 @@ document.getElementById('emailForm').addEventListener('submit', async function(e
       })
     });
 
-    if (response.ok) {
-      console.log('Email submitted successfully');
-    } else {
+    if (!response.ok) {
       console.error('Failed to submit email:', response.statusText);
     }
   } catch (error) {
@@ -142,7 +140,6 @@ document.getElementById('emailForm').addEventListener('submit', async function(e
     window.location.href = 'https://app.tradingfury.fr/';
   }
 });
-
 
 document.getElementById('newsletterEmail').addEventListener('submit', async function(event) {
   event.preventDefault();
@@ -161,9 +158,7 @@ document.getElementById('newsletterEmail').addEventListener('submit', async func
       })
     });
 
-    if (response.ok) {
-      console.log('Email submitted successfully');
-    } else {
+    if (!response.ok) {
       console.error('Failed to submit email:', response.statusText);
     }
   } catch (error) {
